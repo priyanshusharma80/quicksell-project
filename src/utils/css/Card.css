@@ -1,0 +1,105 @@
+.card {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    /* border: 1px solid #ccc; */
+    box-shadow: 0px 2px 8px 1px #ccc;
+    background-color: var(--white1);
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.cardHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.cardId {
+    color: var(--textgrey);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.cardProfile {
+    height: 26px;
+    width: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white1);
+    background-color: #b06e0c;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    position: relative;
+}
+
+.cardInitials {
+    text-transform: uppercase;
+}
+
+.cardProfileInitial {
+    height: 12px;
+    width: 12px;
+    background-color: var(--grey1);
+    border: 1.5px solid var(--white1);
+    position: absolute;
+    z-index: 0;
+    border-radius: 50%;
+    left: 70%;
+    top: 70%;
+}
+
+.cardAvailable {
+    background-color: rgb(72, 223, 12);
+}
+
+.cardTitle {
+    font-size: 0.90rem;
+    font-weight: 600;
+    color: var(--black1);
+}
+
+.cardTags {
+    display: flex;
+    align-items: center;
+    margin-top: 0.8rem;
+}
+
+.cardTagIcon {
+    border: 1px solid var(--grey1);
+    border-radius: 0.3rem;
+    width: fit-content;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    margin-right: 0.5rem;
+}
+
+.cardTagIcon > svg {
+    color: var(--textgrey);
+    height: 20px;
+}
+
+.tagBox {
+    border: 1px solid var(--grey1);
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    width: fit-content;
+}
+
+.tagTitle {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--textgrey);
+}
+
+.tagTitle::before {
+    display: inline-block;
+    content: " ";
+    height: 10px;
+    width: 10px;
+    background-color: var(--textgrey);
+    border-radius: 50%;
+    margin-right: 0.2rem;
+}

@@ -1,0 +1,49 @@
+.listContainer {
+    width: 360px;
+    margin-left: 2.5rem;
+}
+
+.listContainer:last-child {
+    margin-right: 2.5rem;
+}
+
+.listHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+}
+
+.listHeaderLeft,
+.listHeaderRight {
+    display: flex;
+    align-items: center;
+}
+
+.listIcon {
+    margin-right: .5rem;
+    display: flex;
+    align-items: center;
+}
+
+.listTitle {
+    margin-right: .65rem;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.addItem {
+    margin-right: .5rem;
+    cursor: pointer;
+    color: var(--textgrey);
+}
+
+.optionItem {
+    margin-right: .5rem;
+    cursor: pointer;
+    color: var(--textgrey);
+}
+
+.cardItems {
+    width: 100%;
+}
