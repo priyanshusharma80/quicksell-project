@@ -6,14 +6,14 @@ import '../../utils/css/Navbar.css';
 export default function Navbar(props) {
     const [active, setActive] = useState(false);
 
-    function handleDisplayToggle(e) {
+    const handleActiveState = (e) => {
         setActive(!active);
         if (e.target.value !== undefined) {
             props.handleGroup(e.target.value);
         }
     }
 
-    function handleOrderingValue(e) {
+    function handleOrder(e) {
         setActive(!active);
         if (e.target.value !== undefined) {
             props.handleOrder(e.target.value);
@@ -24,7 +24,7 @@ export default function Navbar(props) {
         <section className="nav">
             <div className="navContainer">
                 <div>
-                    <div className="navDisplayButton" onClick={handleDisplayToggle}>
+                    <div className="navDisplayButton" onClick={handleActiveState}>
                         <div className="navDisplayIcon navDisplayFilter">
                             <img src={DisplayIcon} alt="icon" />
                         </div>
@@ -41,7 +41,7 @@ export default function Navbar(props) {
                                 Grouping
                             </div>
                             <div className="navDropdownSelector">
-                                <select value={props.groupValue} onChange={handleDisplayToggle} className='navSelector' name="grouping">
+                                <select value={props.groupValue} onChange={handleActiveState} className='navSelector' name="grouping">
                                     <option value="status">Status</option>
                                     <option value="user">User</option>
                                     <option value="priority">Priority</option>
@@ -53,7 +53,7 @@ export default function Navbar(props) {
                                 Ordering
                             </div>
                             <div className="navDropdownSelector">
-                                <select value={props.orderValue} onChange={handleOrderingValue} className='navSelector' name="ordering">
+                                <select value={props.orderValue} onChange={handleOrder} className='navSelector' name="ordering">
                                     <option value="priority">Priority</option>
                                     <option value="title">Title</option>
                                 </select>
