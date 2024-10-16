@@ -51,16 +51,18 @@ export default function App() {
             ...ticket,
             userObj: data.users.find(user => user.id === ticket.userId)
           }));
-          setTickets(customData);
+
           handleOrderData(customData);
+          
+          setTickets(customData);
         }
-      } catch (error) {
-        console.error('An Error Occured while Fetching Data:', error);
+      } catch (err) {
+        console.error('An Error Occured while Fetching Data:', err);
       }
     }
 
     fetchData();
-  }, [group, handleOrderData]);
+  }, [handleOrderData,group]);
 
   // unility Handlers for group and order value changes
   
@@ -114,9 +116,9 @@ export default function App() {
     <>
       <Navbar
         group={group}
+        handleOrder={handleOrder}
         order={order}
         handleGroup={handleGroup}
-        handleOrder={handleOrder}
       />
 
 

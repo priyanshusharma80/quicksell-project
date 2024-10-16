@@ -34,8 +34,8 @@ body{
 
   --textgrey: #808184;
 
-  --grey1: #dfe4e9fb;
-  --grey2: #f0f1f4fb;
-  --grey3: #F8F8FAfb;
+  --lightgrey: #F8F8FAfb;      
+  --midgrey: #dfe4e9fb;  
+  --boldgrey: #f0f1f4fb;   
 
 }

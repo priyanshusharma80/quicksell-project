@@ -1,21 +1,20 @@
 import React, { useState } from 'react';
 import DisplayIcon from '../../utils/icons/Display.svg';
 import Down from '../../utils/icons/down.svg';
-
 import '../../utils/css/Navbar.css';
 
 export default function Navbar(props) {
-    const [toggleFilter, setToggleFilter] = useState(false);
+    const [active, setActive] = useState(false);
 
     function handleDisplayToggle(e) {
-        setToggleFilter(!toggleFilter);
+        setActive(!active);
         if (e.target.value !== undefined) {
             props.handleGroup(e.target.value);
         }
     }
 
     function handleOrderingValue(e) {
-        setToggleFilter(!toggleFilter);
+        setActive(!active);
         if (e.target.value !== undefined) {
             props.handleOrder(e.target.value);
         }
@@ -36,7 +35,7 @@ export default function Navbar(props) {
                             <img src={Down} alt="icon" />
                         </div>
                     </div>
-                    <div className={toggleFilter ? "navDisplayDropdown navDisplayDropdownShow" : "navDisplayDropdown"}>
+                    <div className={active ? "navDisplayDropdown navDisplayDropdownShow" : "navDisplayDropdown"}>
                         <div className="navDisplayFilters">
                             <div className="navDropdownCategory">
                                 Grouping
